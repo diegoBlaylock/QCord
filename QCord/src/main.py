@@ -16,7 +16,10 @@ _coro_queue = PQueue()
 
 def main():
     init() #QCord.init
-    CLIENT().run('NjA4MTA5NzUwNTMzNzUwNzg0.GfN--9.Au63P8gNTcNbZsW0SDNBm-lr61qOlCGvDnNKLA')
+    
+    with open("token", "r") as file:
+        token = file.read().strip()
+    CLIENT().run(token)
     
 async def delay(fn, second: float):
     '''Function async decorator that adds a delay to the front of a task'''
