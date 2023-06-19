@@ -17,7 +17,7 @@ _coro_queue = PQueue()
 def main():
     init() #QCord.init
     
-    with open("token", "r") as file:
+    with open("token.secret", "r") as file:
         token = file.read().strip()
     CLIENT().run(token)
     
