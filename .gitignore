@@ -1,2 +1,4 @@
 /.metadata/
 *.secret
+/.vs
+/py_cache
